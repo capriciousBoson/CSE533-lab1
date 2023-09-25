@@ -3,7 +3,7 @@ from google.cloud import compute_v1
 
 project_id = 'cse5333-lab1'
 zone = 'us-central1-a'
-instance_name = 'Ubuntu-VM-lab1'
+instance_name = 'UbuntuVMlab1'
 
 
 
