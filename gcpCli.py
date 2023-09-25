@@ -33,11 +33,11 @@ instance_details = {
     }]
 }
 
-operation = compute_client.insert(project=project_id,
+request = compute_client.instances().insert(project=project_id,
                                   zone=zone_name,
                                   body=instance_details
-                                  ).execute()
-operation_name =operation['name']
+                                  )
+response = request.execute()
 
 compute_client.wait(project=project_id, zone=zone_name, operation=operation_name)
 
