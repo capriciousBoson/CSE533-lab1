@@ -38,7 +38,4 @@ request = compute_client.instances().insert(project=project_id,
                                   body=instance_details
                                   )
 response = request.execute()
-
-compute_client.wait(project=project_id, zone=zone_name, operation=operation_name)
-
 print("instance created...")
