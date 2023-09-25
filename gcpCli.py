@@ -30,7 +30,7 @@ new_instance.network_interfaces = [{
         'network':f'projects/{project_id}/global/networks/default'
     }]
 new_instance.name = instance_name
-new_instance.disks = boot_disk
+new_instance.disks = [boot_disk]
 new_instance.machine_type = f'zones/{zone}/machineTypes/e2-micro'
 
 request = compute_v1.InsertInstanceRequest()
